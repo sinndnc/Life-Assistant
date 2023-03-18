@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "770546017581",
+    "project_id": "life-assistant-25493",
+    "storage_bucket": "life-assistant-25493.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770546017581:android:ccad55563924c525589fa4",
+        "android_client_info": {
+          "package_name": "com.android.lifeassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770546017581-1vvfct94mt5g3tr681knlt5gg03pqen0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.lifeassistant",
+            "certificate_hash": "8af16981680207f97c2ab9534e4d37b9f523f4d4"
+          }
+        },
+        {
+          "client_id": "770546017581-vfmkm27ms5b9q290ca89gt8vu40vimar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-29prxMEFWfJ519hC9BIyz_H2x5b_j0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770546017581-vfmkm27ms5b9q290ca89gt8vu40vimar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
