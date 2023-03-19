@@ -94,7 +94,7 @@ object Dependencies {
 
     object Navigation {
         private const val version = "1.0.0"
-        const val compose = "androidx.navigation:navigation-compose:2.5.2"
+        const val compose = "androidx.navigation:navigation-compose:2.5.3"
         const val hilt = "androidx.hilt:hilt-navigation-compose:$version"
 
     }

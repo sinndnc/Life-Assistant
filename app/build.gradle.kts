@@ -5,6 +5,7 @@ plugins {
     id(com.android.lifeassistant.Dependencies.Plugin.kotlin)
     kotlin(com.android.lifeassistant.Dependencies.Plugin.kapt)
     id(com.android.lifeassistant.Dependencies.Plugin.application)
+    id(com.android.lifeassistant.Dependencies.Plugin.googleService)
 }
 
 android {
@@ -79,11 +80,16 @@ dependencies {
     implementation(Dependencies.Compose.ui)
     implementation(Dependencies.Compose.activity)
     implementation(Dependencies.Compose.material)
+    //Navigation
+    implementation(Dependencies.Navigation.hilt)
+    implementation(Dependencies.Navigation.compose)
     //Firebase
     implementation(platform(Dependencies.Firebase.boom))
     implementation(Dependencies.Firebase.auth)
     implementation(Dependencies.Firebase.analytics)
     implementation(Dependencies.Firebase.firestore)
+    //Preferences
+    implementation(Dependencies.Preferences.datastore)
     //Hilt
     kapt(Dependencies.Hilt.hiltKapt)
     implementation(Dependencies.Hilt.hilt)
