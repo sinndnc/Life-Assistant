@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
 fun Modifier.setThemeBackground(): Modifier = composed {
-    this.then(background(MaterialTheme.colors.background))
+    this.then(background(MaterialTheme.colors.surface))
 }
 
 inline fun Modifier.noRippleClickable(crossinline onClick: () -> Unit): Modifier = composed {

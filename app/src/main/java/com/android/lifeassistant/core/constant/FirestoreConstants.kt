@@ -3,7 +3,7 @@ package com.android.lifeassistant.core.constant
 
 object FirestoreConstants {
 
-    // --------------------- USER collection. -----------------------------------
+    // --------------------- USER collection -----------------------------------
 
     const val USER_COLLECTION = "users"
 
@@ -24,7 +24,7 @@ object FirestoreConstants {
     const val USER_PICTURE_FOLDER = "user_pictures"
 
 
-    // --------------------- CHAT ROOM collection. -----------------------------------
+    // --------------------- CHAT ROOM collection -----------------------------------
 
 
     const val CHAT_ROOM_CHAT_UID = "chatUid"
@@ -49,7 +49,7 @@ object FirestoreConstants {
 
     const val CHAT_ROOM_LAST_MESSAGE_TEXT = "lastMessageText"
 
-    // --------------------- MESSAGE SUB-COLLECTION collection. -----------------------------------
+    // --------------------- MESSAGE SUB-COLLECTION collection -----------------------------------
 
 
     const val MESSAGE_UID = "messageUid"

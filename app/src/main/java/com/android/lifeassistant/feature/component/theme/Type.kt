@@ -29,7 +29,7 @@ val Typography = Typography(
         fontSize = 24.sp,
     ),
     h6 = TextStyle(
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 20.sp,
     ),
     //TITLES
@@ -39,7 +39,7 @@ val Typography = Typography(
     subtitle1 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
+        fontSize = 18.sp
     ),
     /**
      * Subtitle 2 is the top level title.
@@ -47,7 +47,7 @@ val Typography = Typography(
     subtitle2 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Medium,
-        fontSize = 14.sp
+        fontSize = 16.sp
     ),
     //TEXTS
     /**
@@ -60,6 +60,7 @@ val Typography = Typography(
     ),
     /**
      * The font family is little bit smaller than default text.
+     * DEFAULT
      */
     body2 = TextStyle(
         fontFamily = FontFamily.SansSerif,

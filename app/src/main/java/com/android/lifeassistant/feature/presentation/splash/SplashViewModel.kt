@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import com.android.lifeassistant.core.domain.usecase.splash.SplashUseCase
-import com.android.lifeassistant.feature.navigation.Content
+import com.android.lifeassistant.feature.navigation.content.Content
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

@@ -86,6 +86,7 @@ dependencies {
     //Firebase
     implementation(platform(Dependencies.Firebase.boom))
     implementation(Dependencies.Firebase.auth)
+    implementation(Dependencies.Firebase.storage)
     implementation(Dependencies.Firebase.analytics)
     implementation(Dependencies.Firebase.firestore)
     //Preferences

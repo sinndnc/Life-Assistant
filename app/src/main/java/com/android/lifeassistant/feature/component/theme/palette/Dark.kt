@@ -8,7 +8,7 @@ val DarkColorPalette = darkColors(
     primary = Pink300,
     onPrimary = Color.White,
 
-    secondary = Blue300,
+    secondary = Blue500,
     onSecondary = Color.White,
 
     primaryVariant = Pink500,
