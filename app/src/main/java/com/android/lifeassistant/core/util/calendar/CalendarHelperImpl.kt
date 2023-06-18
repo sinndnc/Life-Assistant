@@ -1,6 +1,7 @@
 package com.android.lifeassistant.core.util.calendar
 
 import com.android.lifeassistant.core.domain.model.util.CalendarModel
+import com.android.lifeassistant.core.domain.model.util.TimeModel
 import java.util.*
 import javax.inject.Inject
 
@@ -24,6 +25,14 @@ class CalendarHelperImpl @Inject constructor() : CalendarHelper() {
             i++
         }
         return daysInMonth
+    }
+
+    override fun getTimeOfSpecifiedDate(date: Date): TimeModel {
+        calendar.time = date
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+        val minute = calendar.get(Calendar.MINUTE)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+        return TimeModel(minute, hour, day)
     }
 
 }

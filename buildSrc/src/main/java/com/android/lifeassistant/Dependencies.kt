@@ -16,7 +16,7 @@ object Dependencies {
         const val hilt = "com.google.dagger.hilt.android"
         const val application = "com.android.application"
         const val kotlin = "org.jetbrains.kotlin.android"
-        const val serialization = "plugin.serialization"
+        const val serialization = "org.jetbrains.kotlin.plugin.serialization"
         const val googleService = "com.google.gms.google-services"
 
     }
@@ -32,6 +32,16 @@ object Dependencies {
         const val core = "androidx.core:core-ktx:1.9.0"
     }
 
+    object Ktor {
+        private const val ktor_version = "2.3.0"
+        const val cio = "io.ktor:ktor-client-cio:$ktor_version"
+        const val core = "io.ktor:ktor-client-core:$ktor_version"
+        const val android = "io.ktor:ktor-client-android:$ktor_version"
+        const val negotiation = "io.ktor:ktor-client-content-negotiation:$ktor_version"
+        const val clientSerialization = "io.ktor:ktor-client-serialization:$ktor_version"
+        const val serialization = "io.ktor:ktor-serialization-kotlinx-json:$ktor_version"
+    }
+
     object Firebase {
         private const val version = "31.2.3"
         const val auth = "com.google.firebase:firebase-auth-ktx"
@@ -43,7 +53,7 @@ object Dependencies {
         const val messaging = "com.google.firebase:firebase-messaging-ktx"
     }
 
-    object WorkManager{
+    object WorkManager {
         private const val version = "2.7.1"
         const val runtime = "androidx.work:work-runtime-ktx:$version"
     }
@@ -72,17 +82,18 @@ object Dependencies {
     }
 
     object Serialization {
-        private const val version = "1.4.0"
+        private const val version = "1.5.0"
         const val runtime = "org.jetbrains.kotlinx:kotlinx-serialization-json:$version"
         const val gson = "com.google.code.gson:gson:2.9.0"
     }
 
     object Compose {
-        const val compose_version = "1.3.3"
+        const val compose_version = "1.4.3"
         const val ui = "androidx.compose.ui:ui:$compose_version"
+        const val maps = "com.google.maps.android:maps-compose:2.5.3"
         const val activity = "androidx.activity:activity-compose:1.6.1"
         const val material = "androidx.compose.material:material:1.3.1"
-        const val maps = "com.google.maps.android:maps-compose:2.5.3"
+        const val preview = "androidx.compose.ui:ui-tooling-preview:1.4.3"
     }
 
     object Lifecycle {
@@ -99,7 +110,7 @@ object Dependencies {
 
     }
 
-    object Room{
+    object Room {
         private const val version = "2.4.3"
         const val runtime = "androidx.room:room-runtime:$version"
         const val compiler = "androidx.room:room-compiler:$version"

@@ -19,12 +19,12 @@ import com.android.lifeassistant.feature.component.theme.Blue500
 import com.android.lifeassistant.feature.presentation.main._home.HomeViewModel
 
 @Composable
-fun ColumnScope.ActivityComponent(viewModel: HomeViewModel) {
+fun ColumnScope.ActivityComponent(homeViewModel: HomeViewModel) {
 
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp
     val screenHeight = configuration.screenHeightDp
-    val activityState = rememberLazyListState(viewModel.currentCalendar - 1)
+    val activityState = rememberLazyListState(homeViewModel.currentCalendar - 1)
 
     LazyRow(
         modifier = Modifier
@@ -34,9 +34,9 @@ fun ColumnScope.ActivityComponent(viewModel: HomeViewModel) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceAround
     ) {
-        itemsIndexed(viewModel.daysInMonth) { index, item ->
+        itemsIndexed(homeViewModel.daysInMonth) { index, item ->
 
-            val isSelected = viewModel.currentCalendar - 1 == index
+            val isSelected = homeViewModel.currentCalendar - 1 == index
             val backgroundColor = if (isSelected) Blue500 else Color.White
             val textColor = if (isSelected) Color.White else Color.DarkGray
 

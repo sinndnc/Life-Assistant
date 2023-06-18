@@ -8,17 +8,17 @@ import LifeAssistant.R
 import com.android.lifeassistant.feature.presentation.main._home._view.*
 
 @Composable
-fun HomeContent(viewModel: HomeViewModel, navController: NavController) {
+fun HomeContent(homeViewModel: HomeViewModel, navController: NavController) {
 
     Column {
-        AppBarView(viewModel = viewModel)
+        AppBarView(homeViewModel = homeViewModel)
         Column(
             modifier = Modifier
                 .weight(0.65f)
                 .fillMaxSize()
         ) {
             CategoryView()
-            OngoingTestView(homeViewModel = viewModel)
+            OngoingTestView(homeViewModel = homeViewModel)
         }
     }
 }

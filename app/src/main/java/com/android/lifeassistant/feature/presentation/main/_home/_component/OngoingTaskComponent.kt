@@ -27,7 +27,7 @@ fun ColumnScope.OngoingTaskComponent(homeViewModel: HomeViewModel) {
             .weight(0.8f)
             .fillMaxSize()
     ) {
-        itemsIndexed(homeViewModel.onGoingTaskList) { index, item ->
+        items(2) { item ->
             Spacer(
                 modifier = Modifier.height(10.dp)
             )
@@ -46,8 +46,8 @@ fun ColumnScope.OngoingTaskComponent(homeViewModel: HomeViewModel) {
                         verticalArrangement = Arrangement.SpaceAround,
                         horizontalAlignment = Alignment.Start,
                     ) {
-                        LifeAssistantText(text = item.task_name)
-                        LifeAssistantText(text = item.task_description)
+                        LifeAssistantText(text = item.toString())
+                        LifeAssistantText(text = item.toString())
                     }
                 }
                 Box(

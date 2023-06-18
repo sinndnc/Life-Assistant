@@ -4,7 +4,7 @@ import com.android.lifeassistant.core.domain.model.auth.LoginModel
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 
-interface LoginService {
+interface LoginRemoteService {
 
     fun loginWithEmailAndPassword(model : LoginModel): Task<AuthResult>
 }

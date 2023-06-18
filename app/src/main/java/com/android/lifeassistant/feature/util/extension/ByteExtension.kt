@@ -2,12 +2,17 @@ package com.android.lifeassistant.feature.util.extension
 
 import android.graphics.*
 import android.graphics.Bitmap.Config
+import java.io.ByteArrayOutputStream
 
-fun ByteArray.convertToBitmap(): Bitmap {
-    val bitmap = BitmapFactory.decodeByteArray(this, 0, this.size)
-    return Bitmap.createScaledBitmap(bitmap, 80, 80, true)
+fun Bitmap.toByteArray(): ByteArray {
+    val stream = ByteArrayOutputStream()
+    this.compress(Bitmap.CompressFormat.PNG, 100, stream)
+    return stream.toByteArray()
 }
 
+fun ByteArray.toBitmap(): Bitmap {
+    return BitmapFactory.decodeByteArray(this, 0, this.size)
+}
 fun Bitmap.getCroppedBitmap(): Bitmap? {
     val output = Bitmap.createBitmap(
         this.width,

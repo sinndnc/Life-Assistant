@@ -6,7 +6,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.find.android.feature.util.state.UiState
+import com.android.lifeassistant.feature.util.state.UiState
 
 @Composable
 fun LoginButton(state: UiState, onClick: () -> Unit) {

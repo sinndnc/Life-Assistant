@@ -23,9 +23,7 @@ object FirestoreConstants {
 
     const val USER_PICTURE_FOLDER = "user_pictures"
 
-
     // --------------------- CHAT ROOM collection -----------------------------------
-
 
     const val CHAT_ROOM_CHAT_UID = "chatUid"
 

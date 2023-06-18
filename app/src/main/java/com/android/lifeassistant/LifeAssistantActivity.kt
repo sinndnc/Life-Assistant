@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.collectAsState
 import androidx.core.view.WindowCompat
+import com.android.lifeassistant.core.domain.repostitory.user.UserRepository
+import com.android.lifeassistant.core.util.notification.NotificationHelper
 import com.android.lifeassistant.core.util.theme.ThemeSetting
 import com.android.lifeassistant.core.util.theme.ThemeState
 import com.android.lifeassistant.feature.component.theme.LifeAssistantTheme
@@ -17,13 +19,19 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var themeSetting: ThemeSetting
 
+    @Inject
+    lateinit var userRepository: UserRepository
+
+    @Inject
+    lateinit var notificationHelper: NotificationHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initializeSettings()
         initializeContent()
     }
 
     private fun initializeContent() {
-        initializeSettings()
         setContent {
             val theme = themeSetting.themeState.collectAsState()
             LifeAssistantTheme(ThemeState.Dark) {
@@ -33,6 +41,8 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun initializeSettings() {
+        userRepository.registerUserToken()
+        notificationHelper.createTaskNotificationChannel()
         WindowCompat.setDecorFitsSystemWindows(window, false)
     }
 }

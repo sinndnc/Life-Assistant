@@ -6,6 +6,7 @@ plugins {
     kotlin(com.android.lifeassistant.Dependencies.Plugin.kapt)
     id(com.android.lifeassistant.Dependencies.Plugin.application)
     id(com.android.lifeassistant.Dependencies.Plugin.googleService)
+    id(com.android.lifeassistant.Dependencies.Plugin.serialization)
 }
 
 android {
@@ -67,6 +68,14 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     }
 }
 
+kotlin {
+    sourceSets {
+        all {
+            languageSettings.optIn("io.ktor.util.InternalAPI")
+        }
+    }
+}
+
 kapt {
     correctErrorTypes = true
 }
@@ -78,17 +87,32 @@ dependencies {
     implementation(Dependencies.Lifecycle.runtime)
     //Compose
     implementation(Dependencies.Compose.ui)
+    implementation(Dependencies.Compose.preview)
     implementation(Dependencies.Compose.activity)
     implementation(Dependencies.Compose.material)
+    //Network
+    implementation(Dependencies.Ktor.cio)
+    implementation(Dependencies.Ktor.core)
+    implementation(Dependencies.Ktor.android)
+    implementation(Dependencies.Ktor.negotiation)
+    implementation(Dependencies.Ktor.serialization)
+    implementation(Dependencies.Ktor.clientSerialization)
+    //FreeScroll
+    implementation("com.github.chihsuanwu:compose-free-scroll:0.2.1")
     //Navigation
     implementation(Dependencies.Navigation.hilt)
     implementation(Dependencies.Navigation.compose)
+    //Serialization
+    implementation(Dependencies.Serialization.gson)
+    implementation(Dependencies.Serialization.runtime)
     //Firebase
     implementation(platform(Dependencies.Firebase.boom))
     implementation(Dependencies.Firebase.auth)
     implementation(Dependencies.Firebase.storage)
     implementation(Dependencies.Firebase.analytics)
     implementation(Dependencies.Firebase.firestore)
+    implementation(Dependencies.Firebase.messaging)
+    implementation(Dependencies.Firebase.bootAware)
     //Preferences
     implementation(Dependencies.Preferences.datastore)
     //Hilt

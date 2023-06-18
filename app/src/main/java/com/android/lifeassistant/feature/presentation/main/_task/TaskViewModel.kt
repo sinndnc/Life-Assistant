@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.android.lifeassistant.core.domain.model.util.CalendarModel
 import com.android.lifeassistant.core.domain.model.util.TaskModel
-import com.android.lifeassistant.core.domain.repostitory.StorageRepository
+import com.android.lifeassistant.core.domain.repostitory.user.UserRepository
 import com.android.lifeassistant.core.util.calendar.CalendarHelper
 import com.google.firebase.Timestamp
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +19,7 @@ import javax.inject.Inject
 @HiltViewModel
 class TaskViewModel @Inject constructor(
     private val calendarHelper: CalendarHelper,
-    private val storageRepository: StorageRepository,
+    private val userRepository: UserRepository,
 ) : ViewModel() {
 
     val currentCalendar = calendarHelper.getCurrentDayInMonth
@@ -69,7 +69,7 @@ class TaskViewModel @Inject constructor(
             task_description = _taskDescriptionState.value,
         )
         viewModelScope.launch {
-            storageRepository.createTask(taskModel)
+            userRepository.createTask(taskModel)
         }
     }
 

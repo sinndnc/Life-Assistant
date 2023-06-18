@@ -36,6 +36,7 @@ fun TaskContent(navController: NavController, taskViewModel: TaskViewModel) {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .navigationBarsPadding()
             .noRippleClickable { focusManager.clearFocus() },
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceAround

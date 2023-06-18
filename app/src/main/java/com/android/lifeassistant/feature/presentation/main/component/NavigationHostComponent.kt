@@ -29,7 +29,7 @@ fun NavigationHostComponent(
     NavHost(navigationNavController, startDestination = NavigationBarContent.Home.route, Modifier.padding(innerPadding)) {
         composable(NavigationBarContent.Home.route) {
             val homeViewModel = hiltViewModel<HomeViewModel>()
-            HomeContent(viewModel = homeViewModel, navController = navController)
+            HomeContent(homeViewModel = homeViewModel, navController = navController)
         }
         composable(NavigationBarContent.Message.route) {
             val messageViewModel = hiltViewModel<MessageViewModel>()
@@ -37,7 +37,7 @@ fun NavigationHostComponent(
         }
         composable(NavigationBarContent.Calender.route) {
             val calendarViewModel = hiltViewModel<CalendarViewModel>()
-            CalendarContent(viewModel = calendarViewModel, navController = navController)
+            CalendarContent(viewModel = calendarViewModel)
         }
         composable(NavigationBarContent.Profile.route) {
             val profileViewModel = hiltViewModel<ProfileViewModel>()

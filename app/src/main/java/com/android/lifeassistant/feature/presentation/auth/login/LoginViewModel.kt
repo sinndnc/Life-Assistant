@@ -8,7 +8,7 @@ import androidx.navigation.NavController
 import com.android.lifeassistant.core.domain.model.auth.LoginModel
 import com.android.lifeassistant.core.domain.repostitory.auth.LoginRepository
 import com.android.lifeassistant.feature.navigation.content.Content
-import com.find.android.feature.util.state.UiState
+import com.android.lifeassistant.feature.util.state.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

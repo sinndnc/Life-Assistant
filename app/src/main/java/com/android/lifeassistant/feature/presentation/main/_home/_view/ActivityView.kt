@@ -10,14 +10,14 @@ import com.android.lifeassistant.feature.presentation.main._home._component.Acti
 import com.android.lifeassistant.feature.presentation.main._home._component.ListComponent
 
 @Composable
-fun ColumnScope.ActivityView(viewModel: HomeViewModel) {
+fun ColumnScope.ActivityView(homeViewModel: HomeViewModel) {
     Column(
         modifier = Modifier
             .weight(0.5f)
             .fillMaxSize()
     ) {
         ListComponent(categoryName = "Activities", categoryCaption = "Add activities", onClick = {}) {
-            ActivityComponent(viewModel = viewModel)
+            ActivityComponent(homeViewModel = homeViewModel)
         }
     }
 }

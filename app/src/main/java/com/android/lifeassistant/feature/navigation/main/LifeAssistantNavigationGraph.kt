@@ -17,9 +17,7 @@ fun LifeAssistantNavigationGraph() {
     NavHost(
         modifier = Modifier
             .fillMaxSize()
-            .setThemeBackground()
-            .statusBarsPadding()
-            .navigationBarsPadding(),
+            .setThemeBackground(),
         navController = navController,
         startDestination = Content.Splash.route,
     ) {
